@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,371 +12,369 @@
             box-sizing: border-box;
         }
 
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-        color: white;
-        min-height: 100vh;
-        overflow-x: hidden;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-    /* Animated background elements */
-    .bg-animations {
-        position: fixed;
-        inset: 0;
-        overflow: hidden;
-        pointer-events: none;
-        z-index: 0;
-    }
+        /* Animated background elements */
+        .bg-animations {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
 
-    .bg-blob {
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(80px);
-        opacity: 0.1;
-        mix-blend-mode: multiply;
-    }
-
-    .bg-blob-1 {
-        top: 5rem;
-        left: 2.5rem;
-        width: 18rem;
-        height: 18rem;
-        background: #dc2626;
-        animation: pulse 4s ease-in-out infinite;
-    }
-
-    .bg-blob-2 {
-        top: 10rem;
-        right: 2.5rem;
-        width: 18rem;
-        height: 18rem;
-        background: #ca8a04;
-        animation: pulse 4s ease-in-out infinite 1s;
-    }
-
-    .bg-blob-3 {
-        bottom: 5rem;
-        left: 50%;
-        width: 18rem;
-        height: 18rem;
-        background: #2563eb;
-        animation: pulse 4s ease-in-out infinite 2s;
-    }
-
-    @keyframes pulse {
-        0%, 100% {
-            transform: scale(1);
+        .bg-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
             opacity: 0.1;
+            mix-blend-mode: multiply;
         }
-        50% {
-            transform: scale(1.1);
-            opacity: 0.15;
+
+        .bg-blob-1 {
+            top: 5rem;
+            left: 2.5rem;
+            width: 18rem;
+            height: 18rem;
+            background: #dc2626;
+            animation: pulse 4s ease-in-out infinite;
         }
-    }
 
-    /* Main container */
-    .container {
-        position: relative;
-        z-index: 10;
-        max-width: 64rem;
-        margin: 0 auto;
-        padding: 2rem 1rem;
-    }
+        .bg-blob-2 {
+            top: 10rem;
+            right: 2.5rem;
+            width: 18rem;
+            height: 18rem;
+            background: #ca8a04;
+            animation: pulse 4s ease-in-out infinite 1s;
+        }
 
-    @media (min-width: 640px) {
+        .bg-blob-3 {
+            bottom: 5rem;
+            left: 50%;
+            width: 18rem;
+            height: 18rem;
+            background: #2563eb;
+            animation: pulse 4s ease-in-out infinite 2s;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.15;
+            }
+        }
+
+        /* Main container */
         .container {
-            padding: 3rem 1.5rem;
+            position: relative;
+            z-index: 10;
+            max-width: 64rem;
+            margin: 0 auto;
+            padding: 2rem 1rem;
         }
-    }
 
-    /* Header Section */
-    .header {
-        text-align: center;
-        margin-bottom: 3rem;
-        opacity: 0;
-        transform: translateY(-2.5rem);
-        animation: fadeInDown 1s ease-out forwards;
-    }
-
-    @keyframes fadeInDown {
-        to {
-            opacity: 1;
-            transform: translateY(0);
+        @media (min-width: 640px) {
+            .container {
+                padding: 3rem 1.5rem;
+            }
         }
-    }
 
-    .logo-container {
-        margin-bottom: 1.5rem;
-        display: inline-block;
-    }
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(-2.5rem);
+            animation: fadeInDown 1s ease-out forwards;
+        }
 
-    .logo {
-        width: 8rem;
-        height: 8rem;
-        margin: 0 auto;
-        background: white;
-        border-radius: 50%;
-        padding: 0.5rem;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        ring: 4px solid rgba(220, 38, 38, 0.2);
-        transition: all 0.3s ease;
-    }
+        @keyframes fadeInDown {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    .logo:hover {
-        transform: scale(1.05);
-        box-shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.3);
-    }
+        .logo-container {
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
 
-    .logo img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        object-fit: cover;
-    }
+        .logo {
+            width: 8rem;
+            height: 8rem;
+            margin: 0 auto;
+            background: white;
+            border-radius: 50%;
+            padding: 0.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            ring: 4px solid rgba(220, 38, 38, 0.2);
+            transition: all 0.3s ease;
+        }
 
-    .main-title {
-        font-size: 3rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-        background: linear-gradient(to right, #ffffff, #fecaca, #fef3c7);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
+        .logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.3);
+        }
 
-    @media (min-width: 640px) {
+        .logo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
         .main-title {
-            font-size: 3.75rem;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #ffffff, #fecaca, #fef3c7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-    }
 
-    .subtitle {
-        font-size: 1.25rem;
-        color: #cbd5e1;
-        font-weight: 500;
-        margin-bottom: 0.5rem;
-    }
+        @media (min-width: 640px) {
+            .main-title {
+                font-size: 3.75rem;
+            }
+        }
 
-    @media (min-width: 640px) {
         .subtitle {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
         }
-    }
 
-    .tagline {
-        font-size: 1.125rem;
-        color: #94a3b8;
-    }
-
-    /* Mission Statement */
-    .mission {
-        margin-bottom: 4rem;
-        opacity: 0;
-        transform: translateY(2.5rem);
-        animation: fadeInUp 1s ease-out 0.2s forwards;
-    }
-
-    @keyframes fadeInUp {
-        to {
-            opacity: 1;
-            transform: translateY(0);
+        @media (min-width: 640px) {
+            .subtitle {
+                font-size: 1.5rem;
+            }
         }
-    }
 
-    .mission-card {
-        backdrop-filter: blur(20px);
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 1rem;
-        padding: 2rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        transition: all 0.3s ease;
-    }
+        .tagline {
+            font-size: 1.125rem;
+            color: #94a3b8;
+        }
 
-    .mission-card:hover {
-        background: rgba(255, 255, 255, 0.1);
-    }
+        /* Mission Statement */
+        .mission {
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(2.5rem);
+            animation: fadeInUp 1s ease-out 0.2s forwards;
+        }
 
-    .mission-title {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-        text-align: center;
-        background: linear-gradient(to right, #f87171, #fbbf24);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    @media (min-width: 640px) {
+        .mission-card {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .mission-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
         .mission-title {
-            font-size: 1.875rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-align: center;
+            background: linear-gradient(to right, #f87171, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-    }
 
-    .mission-text {
-        color: #cbd5e1;
-        text-align: center;
-        font-size: 1.125rem;
-        line-height: 1.75;
-    }
+        @media (min-width: 640px) {
+            .mission-title {
+                font-size: 1.875rem;
+            }
+        }
 
-    /* Apps Grid */
-    .apps-grid {
-        display: grid;
-        gap: 1.5rem;
-        margin-bottom: 3rem;
-    }
+        .mission-text {
+            color: #cbd5e1;
+            text-align: center;
+            font-size: 1.125rem;
+            line-height: 1.75;
+        }
 
-    @media (min-width: 640px) {
+        /* Apps Grid */
         .apps-grid {
-            grid-template-columns: repeat(2, 1fr);
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
         }
-    }
 
-    .app-card {
-        opacity: 0;
-        transform: translateY(2.5rem);
-        text-decoration: none;
-        color: inherit;
-        display: block;
-    }
-
-    .app-card:nth-child(1) {
-        animation: fadeInUp 1s ease-out 0.3s forwards;
-    }
-
-    .app-card:nth-child(2) {
-        animation: fadeInUp 1s ease-out 0.4s forwards;
-    }
-
-    .app-card:nth-child(3) {
-        animation: fadeInUp 1s ease-out 0.5s forwards;
-    }
-
-    .app-card:nth-child(4) {
-        animation: fadeInUp 1s ease-out 0.6s forwards;
-    }
-
-    .app-card:nth-child(5) {
-        animation: fadeInUp 1s ease-out 0.7s forwards;
-    }
-
-    .app-card:nth-child(6) {
-        animation: fadeInUp 1s ease-out 0.8s forwards;
-    }
-
-    .app-card-inner {
-        backdrop-filter: blur(20px);
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 1rem;
-        padding: 1.5rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-        transition: all 0.3s ease;
-        height: 100%;
-    }
-
-    .app-card:hover .app-card-inner {
-        background: rgba(255, 255, 255, 0.1);
-        border-color: rgba(239, 68, 68, 0.5);
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        transform: scale(1.05) translateY(-0.5rem);
-    }
-
-    .app-header {
-        display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .app-icon {
-        font-size: 2.25rem;
-        transition: transform 0.3s ease;
-    }
-
-    .app-card:hover .app-icon {
-        transform: scale(1.1);
-    }
-
-    .app-name {
-        font-size: 1.25rem;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-        transition: color 0.3s ease;
-    }
-
-    .app-card:hover .app-name {
-        color: #f87171;
-    }
-
-    .app-description {
-        color: #94a3b8;
-        font-size: 0.875rem;
-        line-height: 1.5;
-        transition: color 0.3s ease;
-    }
-
-    .app-card:hover .app-description {
-        color: #cbd5e1;
-    }
-
-    .app-launch {
-        margin-top: 1rem;
-        display: flex;
-        align-items: center;
-        color: #f87171;
-        font-weight: 500;
-        transition: transform 0.3s ease;
-    }
-
-    .app-card:hover .app-launch {
-        transform: translateX(0.5rem);
-    }
-
-    .app-launch svg {
-        width: 1.25rem;
-        height: 1.25rem;
-        margin-left: 0.5rem;
-    }
-
-    /* Footer */
-    .footer {
-        text-align: center;
-        opacity: 0;
-        animation: fadeIn 1s ease-out 0.9s forwards;
-    }
-
-    @keyframes fadeIn {
-        to {
-            opacity: 1;
+        @media (min-width: 640px) {
+            .apps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
-    }
 
-    .footer-badge {
-        display: inline-block;
-        backdrop-filter: blur(20px);
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 9999px;
-        padding: 0.75rem 1.5rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
+        .app-card {
+            opacity: 0;
+            transform: translateY(2.5rem);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
 
-    .footer-text {
-        color: #94a3b8;
-        font-size: 0.875rem;
-    }
+        .app-card:nth-child(1) {
+            animation: fadeInUp 1s ease-out 0.3s forwards;
+        }
 
-    .footer-motto {
-        color: #64748b;
-        font-size: 0.75rem;
-        margin-top: 1rem;
-    }
-</style>
-```
+        .app-card:nth-child(2) {
+            animation: fadeInUp 1s ease-out 0.4s forwards;
+        }
 
+        .app-card:nth-child(3) {
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+
+        .app-card:nth-child(4) {
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+        }
+
+        .app-card:nth-child(5) {
+            animation: fadeInUp 1s ease-out 0.7s forwards;
+        }
+
+        .app-card:nth-child(6) {
+            animation: fadeInUp 1s ease-out 0.8s forwards;
+        }
+
+        .app-card-inner {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .app-card:hover .app-card-inner {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(239, 68, 68, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05) translateY(-0.5rem);
+        }
+
+        .app-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .app-icon {
+            font-size: 2.25rem;
+            transition: transform 0.3s ease;
+        }
+
+        .app-card:hover .app-icon {
+            transform: scale(1.1);
+        }
+
+        .app-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .app-card:hover .app-name {
+            color: #f87171;
+        }
+
+        .app-description {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            transition: color 0.3s ease;
+        }
+
+        .app-card:hover .app-description {
+            color: #cbd5e1;
+        }
+
+        .app-launch {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            color: #f87171;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+
+        .app-card:hover .app-launch {
+            transform: translateX(0.5rem);
+        }
+
+        .app-launch svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-left: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.9s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .footer-badge {
+            display: inline-block;
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 9999px;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-text {
+            color: #94a3b8;
+            font-size: 0.875rem;
+        }
+
+        .footer-motto {
+            color: #64748b;
+            font-size: 0.75rem;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 <body>
     <div class="bg-animations">
@@ -386,172 +383,169 @@
         <div class="bg-blob bg-blob-3"></div>
     </div>
 
-```
-<div class="container">
-    <!-- Header -->
-    <div class="header">
-        <div class="logo-container">
-            <div class="logo">
-                <!-- Replace the src below with your actual logo path (e.g., ./logo.png) -->
-                <img src="logo.png" alt="Semper Admin Logo">
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo-container">
+                <div class="logo">
+                    <!-- Replace the src below with your actual logo path (e.g., ./logo.png) -->
+                    <img src="logo.png" alt="Semper Admin Logo">
+                </div>
+            </div>
+            
+            <h1 class="main-title">Semper Admin</h1>
+            
+            <p class="subtitle">Empowering Marines to Excel</p>
+            
+            <p class="tagline">Mentor | Manage | Master</p>
+        </div>
+
+        <!-- Mission Statement -->
+        <div class="mission">
+            <div class="mission-card">
+                <h2 class="mission-title">Mission-Critical Tools for Marines</h2>
+                <p class="mission-text">
+                    Administrative excellence is the backbone of every successful mission. These purpose-built applications eliminate the tedious manual work that pulls Marines away from their core duties. From formatting official correspondence to calculating critical career dates, each tool is designed to save time, reduce errors, and empower Marines to focus on what truly matters—leading and excelling in their roles.
+                </p>
             </div>
         </div>
-        
-        <h1 class="main-title">Semper Admin</h1>
-        
-        <p class="subtitle">Empowering Marines to Excel</p>
-        
-        <p class="tagline">Mentor | Manage | Master</p>
-    </div>
 
-    <!-- Mission Statement -->
-    <div class="mission">
-        <div class="mission-card">
-            <h2 class="mission-title">Mission-Critical Tools for Marines</h2>
-            <p class="mission-text">
-                Administrative excellence is the backbone of every successful mission. These purpose-built applications eliminate the tedious manual work that pulls Marines away from their core duties. From formatting official correspondence to calculating critical career dates, each tool is designed to save time, reduce errors, and empower Marines to focus on what truly matters—leading and excelling in their roles.
-            </p>
+        <!-- Apps Grid -->
+        <div class="apps-grid">
+            <!-- Naval Letter Formatter -->
+            <a href="https://semperadmin.github.io/naval-letter-formatter/" target="_blank" rel="noopener noreferrer" class="app-card">
+                <div class="app-card-inner">
+                    <div class="app-header">
+                        <div class="app-icon">📝</div>
+                        <div>
+                            <h3 class="app-name">Naval Letter Formatter</h3>
+                        </div>
+                    </div>
+                    <p class="app-description">
+                        Streamline official correspondence with automated formatting that ensures every naval letter meets Marine Corps standards perfectly.
+                    </p>
+                    <div class="app-launch">
+                        <span>Launch Tool</span>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Marine Corps Directives Formatter -->
+            <a href="https://semperadmin.github.io/marine-corps-directives-formatter/" target="_blank" rel="noopener noreferrer" class="app-card">
+                <div class="app-card-inner">
+                    <div class="app-header">
+                        <div class="app-icon">📋</div>
+                        <div>
+                            <h3 class="app-name">Marine Corps Directives Formatter</h3>
+                        </div>
+                    </div>
+                    <p class="app-description">
+                        Effortlessly format Marine Corps orders and directives with precision, saving time while maintaining regulatory compliance.
+                    </p>
+                    <div class="app-launch">
+                        <span>Launch Tool</span>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PEBD Calculator -->
+            <a href="https://semperadmin.github.io/PEBD-CALCULATOR/" target="_blank" rel="noopener noreferrer" class="app-card">
+                <div class="app-card-inner">
+                    <div class="app-header">
+                        <div class="app-icon">📅</div>
+                        <div>
+                            <h3 class="app-name">PEBD Calculator</h3>
+                        </div>
+                    </div>
+                    <p class="app-description">
+                        Calculate Pay Entry Base Date instantly with accuracy, eliminating manual errors and providing Marines with critical career timeline information.
+                    </p>
+                    <div class="app-launch">
+                        <span>Launch Tool</span>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Fitness Report Evaluator -->
+            <a href="https://semperadmin.github.io/FITNESS-REPORT-EVALUATOR/" target="_blank" rel="noopener noreferrer" class="app-card">
+                <div class="app-card-inner">
+                    <div class="app-header">
+                        <div class="app-icon">⭐</div>
+                        <div>
+                            <h3 class="app-name">Fitness Report Evaluator</h3>
+                        </div>
+                    </div>
+                    <p class="app-description">
+                        Analyze and optimize fitness reports with data-driven insights, helping Marines understand their evaluations and career progression.
+                    </p>
+                    <div class="app-launch">
+                        <span>Launch Tool</span>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- AMHS Message Formatter -->
+            <a href="https://semperadmin.github.io/AMHS-Message-Formatter/" target="_blank" rel="noopener noreferrer" class="app-card">
+                <div class="app-card-inner">
+                    <div class="app-header">
+                        <div class="app-icon">📡</div>
+                        <div>
+                            <h3 class="app-name">AMHS Message Formatter</h3>
+                        </div>
+                    </div>
+                    <p class="app-description">
+                        Format Automated Message Handling System messages to military standards, ensuring proper structure and protocol compliance for secure communications.
+                    </p>
+                    <div class="app-launch">
+                        <span>Launch Tool</span>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- USMC Directives Hub -->
+            <a href="https://semperadmin.github.io/usmc-directives-hub/" target="_blank" rel="noopener noreferrer" class="app-card">
+                <div class="app-card-inner">
+                    <div class="app-header">
+                        <div class="app-icon">📚</div>
+                        <div>
+                            <h3 class="app-name">USMC Directives Hub</h3>
+                        </div>
+                    </div>
+                    <p class="app-description">
+                        Access and search Marine Corps orders, bulletins, and administrative messages in one centralized location for quick reference and compliance.
+                    </p>
+                    <div class="app-launch">
+                        <span>Launch Tool</span>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-badge">
+                <p class="footer-text">Built with dedication for the Marine Corps community</p>
+            </div>
+            <p class="footer-motto">Semper Fidelis</p>
         </div>
     </div>
-
-    <!-- Apps Grid -->
-    <div class="apps-grid">
-        <!-- Naval Letter Formatter -->
-        <a href="https://semperadmin.github.io/naval-letter-formatter/" target="_blank" rel="noopener noreferrer" class="app-card">
-            <div class="app-card-inner">
-                <div class="app-header">
-                    <div class="app-icon">📝</div>
-                    <div>
-                        <h3 class="app-name">Naval Letter Formatter</h3>
-                    </div>
-                </div>
-                <p class="app-description">
-                    Streamline official correspondence with automated formatting that ensures every naval letter meets Marine Corps standards perfectly.
-                </p>
-                <div class="app-launch">
-                    <span>Launch Tool</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                </div>
-            </div>
-        </a>
-
-        <!-- Marine Corps Directives Formatter -->
-        <a href="https://semperadmin.github.io/marine-corps-directives-formatter/" target="_blank" rel="noopener noreferrer" class="app-card">
-            <div class="app-card-inner">
-                <div class="app-header">
-                    <div class="app-icon">📋</div>
-                    <div>
-                        <h3 class="app-name">Marine Corps Directives Formatter</h3>
-                    </div>
-                </div>
-                <p class="app-description">
-                    Effortlessly format Marine Corps orders and directives with precision, saving time while maintaining regulatory compliance.
-                </p>
-                <div class="app-launch">
-                    <span>Launch Tool</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                </div>
-            </div>
-        </a>
-
-        <!-- PEBD Calculator -->
-        <a href="https://semperadmin.github.io/PEBD-CALCULATOR/" target="_blank" rel="noopener noreferrer" class="app-card">
-            <div class="app-card-inner">
-                <div class="app-header">
-                    <div class="app-icon">📅</div>
-                    <div>
-                        <h3 class="app-name">PEBD Calculator</h3>
-                    </div>
-                </div>
-                <p class="app-description">
-                    Calculate Pay Entry Base Date instantly with accuracy, eliminating manual errors and providing Marines with critical career timeline information.
-                </p>
-                <div class="app-launch">
-                    <span>Launch Tool</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                </div>
-            </div>
-        </a>
-
-        <!-- Fitness Report Evaluator -->
-        <a href="https://semperadmin.github.io/FITNESS-REPORT-EVALUATOR/" target="_blank" rel="noopener noreferrer" class="app-card">
-            <div class="app-card-inner">
-                <div class="app-header">
-                    <div class="app-icon">⭐</div>
-                    <div>
-                        <h3 class="app-name">Fitness Report Evaluator</h3>
-                    </div>
-                </div>
-                <p class="app-description">
-                    Analyze and optimize fitness reports with data-driven insights, helping Marines understand their evaluations and career progression.
-                </p>
-                <div class="app-launch">
-                    <span>Launch Tool</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                </div>
-            </div>
-        </a>
-
-        <!-- AMHS Message Formatter -->
-        <a href="https://semperadmin.github.io/AMHS-Message-Formatter/" target="_blank" rel="noopener noreferrer" class="app-card">
-            <div class="app-card-inner">
-                <div class="app-header">
-                    <div class="app-icon">📡</div>
-                    <div>
-                        <h3 class="app-name">AMHS Message Formatter</h3>
-                    </div>
-                </div>
-                <p class="app-description">
-                    Format Automated Message Handling System messages to military standards, ensuring proper structure and protocol compliance for secure communications.
-                </p>
-                <div class="app-launch">
-                    <span>Launch Tool</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                </div>
-            </div>
-        </a>
-
-        <!-- USMC Directives Hub -->
-        <a href="https://semperadmin.github.io/usmc-directives-hub/" target="_blank" rel="noopener noreferrer" class="app-card">
-            <div class="app-card-inner">
-                <div class="app-header">
-                    <div class="app-icon">📚</div>
-                    <div>
-                        <h3 class="app-name">USMC Directives Hub</h3>
-                    </div>
-                </div>
-                <p class="app-description">
-                    Access and search Marine Corps orders, bulletins, and administrative messages in one centralized location for quick reference and compliance.
-                </p>
-                <div class="app-launch">
-                    <span>Launch Tool</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        <div class="footer-badge">
-            <p class="footer-text">Built with dedication for the Marine Corps community</p>
-        </div>
-        <p class="footer-motto">Semper Fidelis</p>
-    </div>
-</div>
-```
-
 </body>
 </html>
