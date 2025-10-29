@@ -223,17 +223,25 @@
         }
 
         /* Apps Grid */
-        .apps-grid {
-            display: grid;
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
+.apps-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Add this line */
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    width: 100%; /* Ensure full width */
+}
+  
+@media (min-width: 640px) {
+    .apps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-        @media (min-width: 640px) {
-            .apps-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+@media (min-width: 1024px) {
+    .apps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
         .app-card {
             opacity: 0;
